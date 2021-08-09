@@ -5,34 +5,25 @@
 
 class Car:
 
-    def __init__(self, brand, model, year, speed=0):
+    def __init__(self, brand, model, year, speed=int(0)):
         self.brand = brand
         self.model = model
         self.year = year
         self.speed = speed
 
-    def speed_up(self) -> object:
-        speed_change = self.speed + 5
-        return speed_change
+    def speed_up(self):
+        self.speed += 5
 
     def speed_down(self):
-        speed_change = self.speed - 5
-        return speed_change
+        self.speed -= 5
 
     def car_stop(self):
         self.speed = 0
-        speed_change = self.speed
-        return speed_change
 
     def current_speed(self):
-        current_speed = self.speed
-        return f"{current_speed}"
+        print(self.speed)
 
     def reverse_gear(self):
-        speed_change = -abs(self.speed)
-        return speed_change
-
-
-
+        self.speed = -abs(self.speed)
 
 
